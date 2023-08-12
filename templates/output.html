@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response</title>
+</head>
+<body style="background-color:rgb(170, 156, 241);">
+    <center style="margin-top: 250px;">
+        {% if prediction_text %}
+           {% if prediction_text > 0.5 %}
+            <h1 style="color:red">Attention! Your burnout rate is {{prediction_text}}<br><br> You are highly prone of getting a burnout phase, Kindly consult the counselor</h1>
+           {% else %}
+            <h1 style="color:green">Your burrnout rate is {{prediction_text}} <br><br> You are currently on the safe side with less signs of burnout</h1>
+           {% endif %}
+        {% endif %}
+
+    </center>
+    
+</body>
+</html>

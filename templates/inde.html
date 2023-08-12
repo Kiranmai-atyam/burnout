@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>burnout analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    
+    <section class="container">
+      <header>Checkout Your Burnout Status</header>
+      <form action="{{url_for('predict')}}" method="post"class="form">
+        
+        <div class="input-box">
+          <label>Designation</label>
+          <input type="text" name='Designation' placeholder="Rate your Designation on a scale of 0-5" required />
+        </div>
+
+        <div class="input-box">
+          <label>Mental Fatigue Score</label>
+          <input type="text"  name='Mental Fatigue Score' placeholder="Mental Fatigue Score" required />
+        </div>
+
+        
+          <div class="input-box">
+            <label>Gender</label>
+            <input type="text" name='Gender' placeholder="Male/Female" required />
+          </div>
+          <div class="input-box">
+            <label>WFH Setup Available</label>
+            <input type="text" name='WFH Setup Available' placeholder="Yes/No" required />
+          </div>
+        
+            <div class="input-box">
+              <label>Date</label>
+            <input type="text" name='Day' placeholder="Enter the date of joining, eg:23" required /></div>
+            <div class="input-box">
+              <label>Year</label>
+              <input type="text" name='Year'placeholder="Enter the year of joining, eg:2022" required />
+            </div>
+            
+          
+        
+        <button type="submit">Burnout Status</button>
+
+      </form>
+    
+    </section>
+    
+  </body>
+</html>
