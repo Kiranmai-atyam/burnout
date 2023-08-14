@@ -51,8 +51,13 @@ def predict():
         prediction=model.predict(np.array([[Designation,MentalFatigueScore,Female,Male,No,Yes,day,year]]))
         
         output=round(prediction[0],2)
-        if output:
-            return render_template('output.html',prediction_text=output)
+        if output>0.4 and output<0.6:
+            return render_template('inde.html',prediction_text="Attention! your burnout rate is {}, You are about to get a burnout phase, Kindly consult the counselor".format(output))
+        elif(output>=0.6):
+            return render_template('inde.html',prediction_text="Attention! your burnout rate is {}, You are highly prone of getting a burnout phase, Kindly consult the counselor".format(output))
+        else:
+            
+            return render_template('inde.html',prediction_text="your burrnout rate is {} ,so You are currently on the safe side with less signs of burnout ".format(output))
     else:
         return render_template('inde.html')
 
