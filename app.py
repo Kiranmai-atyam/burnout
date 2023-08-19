@@ -52,14 +52,14 @@ def predict():
         
         output=round(prediction[0],2)
         if output>0.4 and output<0.6:
-            return render_template('inde.html',prediction_text="Attention! your burnout rate is {}, You are about to get a burnout phase, Kindly consult the counselor".format(output))
+            return render_template('templates/inde.html',prediction_text="Attention! your burnout rate is {}, You are about to get a burnout phase, Kindly consult the counselor".format(output))
         elif(output>=0.6):
-            return render_template('inde.html',prediction_text="Attention! your burnout rate is {}, You are highly prone of getting a burnout phase, Kindly consult the counselor".format(output))
+            return render_template('templates/inde.html',prediction_text="Attention! your burnout rate is {}, You are highly prone of getting a burnout phase, Kindly consult the counselor".format(output))
         else:
             
-            return render_template('inde.html',prediction_text="your burrnout rate is {} ,so You are currently on the safe side with less signs of burnout ".format(output))
+            return render_template('templates/inde.html',prediction_text="your burrnout rate is {} ,so You are currently on the safe side with less signs of burnout ".format(output))
     else:
-        return render_template('inde.html')
+        return render_template('templates/inde.html')
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)
