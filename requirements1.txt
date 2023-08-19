@@ -1,4 +1,4 @@
-asgiref==3.5.2
+sasgiref==3.5.2
 blinker==1.6.2
 click==8.1.6
 colorama==0.4.6
