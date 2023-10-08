@@ -20,7 +20,7 @@ platformdirs==3.10.0
 python-dateutil==2.8.2
 pytz==2023.3
 scikit-learn==1.0.2
-scipy==1.11.1
+scipy==1.6.0
 six==1.16.0
 sklearn==0.0.post7
 sqlparse==0.4.2
